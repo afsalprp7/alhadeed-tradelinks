@@ -1,0 +1,30 @@
+
+.iron-flats{
+    background-image: url('../../../public/images/products/iron-flat.jpg');
+    background-size: cover;
+}
+
+.iron-rounds{
+    background-image: url('../../../public/images/products/iron-rounds.png');
+    background-size: cover;
+}
+
+.iron-channels{
+    background-image: url('../../../public/images/products/iron-channels.jpg');
+    background-size: cover;
+}
+
+.iron-angles{
+    background-image: url('../../../public/images/products/iron-angles.avif');
+    background-size: cover;
+}
+
+.steel-sheets{
+    background-image: url('../../../public/images/products/steel-sheets.jpg');
+    background-size: cover;
+}
+
+.iron-squre-pipes{
+    background-image: url('../../../public/images/products/iron-square-pipe.jpeg');
+    background-size: cover;
+}

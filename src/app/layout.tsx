@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   icons : {
     icon : '/fevicon/favicon.ico'
   }
+  
 };
 
 export default function RootLayout({

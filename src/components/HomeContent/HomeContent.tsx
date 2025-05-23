@@ -1,9 +1,12 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import "./style.css";
 import Image from "next/image";
 
 import logo_image from "../../../public/fevicon/android-chrome-192x192.png";
+import ProductsContactsSection from "../Product_contactSection/ProductsContactsSection";
 function HomeContent() {
+  const [expanded, setExpanded] = useState<boolean>(false);
   return (
     <div className="mt-7">
       <div className="w-screen md:w-full p-10 h-auto about-section flex flex-col md:flex-row justify-between items-center space-y-10 md:sapce-y-0">
@@ -20,8 +23,14 @@ function HomeContent() {
             <Image src={logo_image} alt="main-image-aboutus" />
           </div>
         </div>
-        <div className="space-y-5 w-full md:w-[50%] md:bg-gray-100 md:p-10 md:rounded-2xl">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-[#0000CC]  to-[#F48C8C] bg-clip-text text-transparent">ABOUT US</h1>
+        <div
+          className={`space-y-5 w-full md:w-[50%] md:bg-gray-100 md:p-10 md:rounded-2xl  ${
+            expanded ? "h-auto" : "h-[300px] overflow-hidden md:h-auto"
+          }`}
+        >
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-[#0000CC]  to-[#F48C8C] bg-clip-text text-transparent">
+            ABOUT US
+          </h1>
           <p className="text-justify reading-relaxed">
             At Alhadeed Trade Links, we believe that the foundation of any great
             structure lies in the quality of its materials — and the trust
@@ -37,7 +46,14 @@ function HomeContent() {
             Materials. Stronger Relationships. That’s our promise
           </p>
         </div>
+        <span
+          onClick={() => setExpanded((prev)=> prev ? false : true)}
+          className="text-gray-500 md:hidden"
+        >
+          {expanded ? "less" : "more..."}
+        </span>
       </div>
+      <ProductsContactsSection />
     </div>
   );
 }

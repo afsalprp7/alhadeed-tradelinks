@@ -23,7 +23,7 @@ function ContactDetails() {
             <div className="flex items-center md:justify-start space-x-4">
               <MdPhone className="text-xl md:text-2xl text-[#0000CC]" />
               <span className="text-sm md:text-base">
-                9747782881, 9387102420, 9072526000
+                 9387102420, 9747782881, 9072526000
               </span>
             </div>
 

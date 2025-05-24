@@ -8,11 +8,19 @@ import iorn_bars from "../../../public/images/iornBars.jpeg";
 import { motion } from "framer-motion";
 
 import { SheetSidebar } from "@/utils/SheetSidebar";
+import { useEffect } from "react";
 
 const Navbar = () => {
+
+  //scroll to the top when reloading the page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   return (
     <nav className="sticky top-0 z-50 shadow-lg bg-white">
-      <div className="px-7 py-3 flex items-center md:space-x-80 relative z-10 h-[80px]">
+      <div className="px-7 py-3 flex items-center md:space-x-44 lg:space-x-80 relative z-10 h-[80px]">
         {/* Logo and Brand */}
         <div className="flex items-center text-black font-bold text-xl">
           {/* Logo Image Placeholder */}
@@ -23,9 +31,10 @@ const Navbar = () => {
             <Image width={80} height={80} src={logo_image} alt="Logo" />
           </div>
           <div className="space-x-1 hidden md:block">
-            <h1 className="text-blue-800 ">ALHADEED TRADE LINKS</h1>
+            <h1 className="text-blue-800 text-sm sm:text-md md:text-lg">ALHADEED TRADE LINKS</h1>
           </div>
         </div>
+
 
         {/* Navigation Links */}
         <div>

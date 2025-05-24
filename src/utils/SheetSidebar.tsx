@@ -1,3 +1,4 @@
+"use client";
 import {
   Sheet,
   SheetContent,
@@ -6,12 +7,16 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import Link from "next/link";
+import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 
-
 export function SheetSidebar() {
+  const [open, setOpen] = useState(false);
+
+  const handleClose = () => setOpen(false);
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <FaBars className="text-gray-600" />
       </SheetTrigger>
@@ -22,15 +27,30 @@ export function SheetSidebar() {
           </SheetTitle>
           <SheetDescription>
             <span className="flex flex-col  space-y-5 mt-5">
-              <a href="#top" className="hover:text-blue-800 transition">
+              <Link
+                href="/#top"
+                scroll={true}
+                className="hover:text-blue-800 transition"
+                onClick={handleClose}
+              >
                 About Us
-              </a>
-              <a href="#products" className="hover:text-blue-800 transition">
+              </Link>
+              <Link
+                href="/#products"
+                scroll={true}
+                className="hover:text-blue-800 transition"
+                onClick={handleClose}
+              >
                 Products
-              </a>
-              <a href="#contact" className="hover:text-blue-800 transition">
+              </Link>
+              <Link
+                href="/#contacts"
+                scroll={true}
+                className="hover:text-blue-800 transition"
+                onClick={handleClose}
+              >
                 Contact Us
-              </a>
+              </Link>
             </span>
           </SheetDescription>
         </SheetHeader>

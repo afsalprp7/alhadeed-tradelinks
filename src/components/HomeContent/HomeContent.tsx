@@ -5,10 +5,13 @@ import Image from "next/image";
 
 import logo_image from "../../../public/fevicon/android-chrome-192x192.png";
 import ProductsContactsSection from "../Product_contactSection/ProductsContactsSection";
+import ContactDetails from "../contactsDetails/ContactDetails";
+
+
 function HomeContent() {
   const [expanded, setExpanded] = useState<boolean>(false);
   return (
-    <div className="mt-7">
+    <div className="mt-7" id="about">
       <div className="w-screen md:w-full p-10 h-auto about-section flex flex-col md:flex-row justify-between items-center space-y-10 md:sapce-y-0">
         <div className="w-screen md:w-[50%] flex justify-center">
           <div className="w-80 h-80 md:w-96 md:h-96 rounded-full shadow-lg shadow-blue-800 flex justify-center items-center relative">
@@ -23,7 +26,7 @@ function HomeContent() {
             <Image src={logo_image} alt="main-image-aboutus" />
           </div>
         </div>
-        <div
+        <div 
           className={`space-y-5 w-full md:w-[50%] md:bg-gray-100 md:p-10 md:rounded-2xl  ${
             expanded ? "h-auto" : "h-[300px] overflow-hidden md:h-auto"
           }`}
@@ -54,6 +57,7 @@ function HomeContent() {
         </span>
       </div>
       <ProductsContactsSection />
+      <ContactDetails/>
     </div>
   );
 }

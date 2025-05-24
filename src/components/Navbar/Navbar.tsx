@@ -9,17 +9,15 @@ import { motion } from "framer-motion";
 
 import { SheetSidebar } from "@/utils/SheetSidebar";
 
-
 const Navbar = () => {
-
   return (
-    <nav className="relative z-50 shadow-lg">
+    <nav className="sticky top-0 z-50 shadow-lg bg-white">
       <div className="px-7 py-3 flex items-center md:space-x-80 relative z-10 h-[80px]">
         {/* Logo and Brand */}
         <div className="flex items-center text-black font-bold text-xl">
           {/* Logo Image Placeholder */}
           <div className="cursor-pointer md:hidden">
-           <SheetSidebar/>
+            <SheetSidebar />
           </div>
           <div className="relative">
             <Image width={80} height={80} src={logo_image} alt="Logo" />
@@ -33,17 +31,38 @@ const Navbar = () => {
         <div>
           <ul className="hidden md:flex space-x-6 text-black font-medium">
             <li>
-              <Link href="/" className="hover:text-blue-800 transition">
+              <Link
+                href="/#"
+                scroll={true}
+                className="hover:text-blue-800 transition"
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/projects" className="hover:text-blue-800 transition">
+              <Link
+                href="/#products"
+                scroll={true}
+                className="hover:text-blue-800 transition"
+              >
                 Products
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-blue-800 transition">
+              <Link
+                href="/#about"
+                scroll={true}
+                className="hover:text-blue-800 transition"
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/#contacts"
+                scroll={true}
+                className="hover:text-blue-800 transition"
+              >
                 Contact
               </Link>
             </li>

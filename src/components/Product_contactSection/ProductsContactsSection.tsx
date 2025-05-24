@@ -8,7 +8,7 @@ import { images } from "@/hardcodedData/home";
 function ProductsContactsSection() {
 
   return (
-    <div className="p-10 space-y-10">
+    <div className="p-10 space-y-10"  id="products">
       <h1 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-[#0000CC]  to-[#F48C8C] bg-clip-text text-transparent">
         PRODUCTS - What We Deliver?
       </h1>
